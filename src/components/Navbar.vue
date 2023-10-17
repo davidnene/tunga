@@ -1,11 +1,13 @@
 <script setup>
+import TungaIcon from '../assets/TungaIcon.vue';
+
 
 </script>
 
 <template>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <RouterLink class="navbar-brand" to="/">tunga</RouterLink>
+            <RouterLink class="navbar-brand" to="/"><TungaIcon width="50"/></RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
