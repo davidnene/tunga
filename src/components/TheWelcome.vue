@@ -15,7 +15,7 @@ import TungaIcon from '../assets/TungaIcon.vue';
 <template>
   <div class="container px-4 text-center">
   <div class="row gx-2">
-    <div class="col-sm-6 col-md-6">
+    <div class="col-sm-12 col-md-6">
      <div class="p-3">
       <h1>Karibu {{ tunga }}!</h1>
       <p class="">
@@ -28,7 +28,7 @@ import TungaIcon from '../assets/TungaIcon.vue';
         <Icon icon="svg-spinners:bars-scale-middle" color="purple" width="100"/>
       </div>
     </div> -->
-    <div class="col-sm-6 col-md-6">
+    <div class="col-sm-12 col-md-6">
       <div class="p-3">
         <a @click="play = !play" v-if="play">
           <TungaIcon/>
