@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -9,13 +10,14 @@ import Navbar from './components/Navbar.vue';
     </div>
   </header>
   <RouterView />
-  <footer class="sticky-bottom">
-    <p>This is the footer</p>
-  </footer>
+  <Footer/>
 </template>
 
 <style>
   .cust-padding {
     padding-top: 80px;
+  }
+  .footer-color {
+    background: #f0f5f9;
   }
 </style>
