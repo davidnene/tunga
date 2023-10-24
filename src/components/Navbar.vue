@@ -5,7 +5,7 @@ import TungaIcon from '../assets/TungaIcon.vue';
 </script>
 
 <template>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
             <RouterLink class="navbar-brand" to="/"><TungaIcon width="50"/></RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,10 +17,10 @@ import TungaIcon from '../assets/TungaIcon.vue';
                     <RouterLink class="nav-link active" aria-current="page" to="/">Home</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink class="nav-link active" aria-current="page" to="/about">About</RouterLink>
+                    <RouterLink class="nav-link active" aria-current="page" to="/projects">Projects</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink class="nav-link active" aria-current="page" to="/services">Services</RouterLink>
+                    <RouterLink class="nav-link active" aria-current="page" to="/funding">Funding</RouterLink>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
