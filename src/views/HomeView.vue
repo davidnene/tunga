@@ -2,6 +2,7 @@
 import Quote from '../components/Quote.vue';
 import TheWelcome from '../components/TheWelcome.vue'
 import ImageCard from '../assets/ImageCard.vue'
+import NavDrawer from '../components/NavDrawer.vue';
 
 
 
@@ -79,5 +80,6 @@ const data = [
         </div>
       </div>
     </div>
+    <NavDrawer/>
   </main>
 </template>
