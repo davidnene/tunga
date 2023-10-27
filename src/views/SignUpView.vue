@@ -52,14 +52,14 @@ import AuthIcon from '../assets/AuthIcon.vue';
             </div>
             <div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <button type="submit" class="btn btn-outline-purple">Sign up</button>
+                    <div class="col-md-4" style="color: white;">
+                        <button type="submit" class="btn btn-bg-purple">Sign up</button>
                     </div>
                     <div class="col-md-4">
                         <p>Already have an account?</p>
                     </div>
                     <div class="col-md-4">
-                        <RouterLink class="btn btn-bg-purple" aria-current="page" to="/login">Sign in</RouterLink>
+                        <RouterLink class="btn btn-outline-purple" aria-current="page" to="/login">Sign in</RouterLink>
                     </div>
                 </div>
             </div>
