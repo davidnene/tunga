@@ -80,6 +80,6 @@ const data = [
         </div>
       </div>
     </div>
-    <NavDrawer/>
+    <!-- <NavDrawer/> -->
   </main>
 </template>
