@@ -40,17 +40,29 @@ import TungaIcon from '../assets/TungaIcon.vue';
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li> -->
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-purple" type="submit">Search</button>
-            </form>
+            <RouterLink class="btn btn-bg-purple btn-pos-signup" aria-current="page" to="/signup">Sign up</RouterLink>
+            <RouterLink class="btn btn-outline-purple btn-pos-login" aria-current="page" to="/signup">Login</RouterLink>
             </div>
         </div>
     </nav>
 </template>
 
 <style scoped>
- .btn-outline-purple{
+ .btn-bg-purple{
+    background-color: purple;
+    color: white;
+ }
+ .btn-pos-signup {
+    position: relative;
+    left: 40%;
+ }
+ .btn-outline-purple {
     border-color: purple;
+ }
+
+ .btn-pos-login {
+    position: relative;
+    left: 30.5%;
+    color: purple;
  }
 </style>
