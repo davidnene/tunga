@@ -20,4 +20,17 @@ import Footer from './components/Footer.vue';
   .footer-color {
     background: #f0f5f9;
   }
+
+.padding-auto {
+  padding: 2%;
+}
+
+.btn-outline-purple {
+    border-color: purple;
+ }
+
+ .btn-bg-purple{
+    background-color: purple;
+    color: white;
+ }
 </style>
