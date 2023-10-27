@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Icon icon="bi:person-lock" color="grey" width="300" />
+        <Icon icon="bi:person-lock" color="grey" width="250" />
     </div>
 </template>
 
