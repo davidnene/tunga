@@ -1,4 +1,5 @@
 <script setup>
+import { Icon } from '@iconify/vue';
 import TungaIcon from '../assets/TungaIcon.vue';
 
 
@@ -40,8 +41,9 @@ import TungaIcon from '../assets/TungaIcon.vue';
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li> -->
             </ul>
-            <RouterLink class="btn btn-bg-purple btn-pos-signup" aria-current="page" to="/signup">Sign up</RouterLink>
-            <RouterLink class="btn btn-outline-purple btn-pos-login" aria-current="page" to="/signup">Login</RouterLink>
+
+            <RouterLink class="btn-pos-signup" aria-current="page" to="/login" title="sign up"><Icon icon="bi:person-lock" color="darkblue" width="40" /></RouterLink>
+            <!-- <RouterLink class="btn btn-outline-purple btn-pos-login" aria-current="page" to="/login">Login</RouterLink> -->
             </div>
         </div>
     </nav>
@@ -56,9 +58,7 @@ import TungaIcon from '../assets/TungaIcon.vue';
     position: relative;
     left: 40%;
  }
- .btn-outline-purple {
-    border-color: purple;
- }
+
 
  .btn-pos-login {
     position: relative;

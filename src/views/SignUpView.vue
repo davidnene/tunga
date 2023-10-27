@@ -1,5 +1,5 @@
 <script setup>
-import { Icon } from '@iconify/vue';
+import AuthIcon from '../assets/AuthIcon.vue';
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import { Icon } from '@iconify/vue';
         <div class="row">
         <div class="col-md-6 justify-content-center">
             <!-- <Icon icon="material-symbols:passkey" color="darkblue" width="300" /> -->
-            <Icon icon="bi:person-lock" color="darkblue" width="300" />
+            <AuthIcon/>
         </div>
         <div class="col-md-6 justify-content-center">
         <form class="row g-3">
@@ -50,9 +50,20 @@ import { Icon } from '@iconify/vue';
                 </label>
                 </div>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+            <div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-outline-purple">Sign up</button>
+                    </div>
+                    <div class="col-md-4">
+                        <p>Already have an account?</p>
+                    </div>
+                    <div class="col-md-4">
+                        <RouterLink class="btn btn-bg-purple" aria-current="page" to="/login">Sign in</RouterLink>
+                    </div>
+                </div>
             </div>
+    
         </form>
     </div>
     </div>
