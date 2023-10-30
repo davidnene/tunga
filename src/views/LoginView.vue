@@ -1,5 +1,25 @@
 <script setup>
 import AuthIcon from '../assets/AuthIcon.vue';
+import axios from 'axios';
+import { ref, reactive } from 'vue';
+
+const loginData = reactive({
+    email: "",
+    password: "",
+})
+
+const sendLogins = async() => {
+    try {
+        const response = await axios.post('http://localhost:8000/api/login', {
+            email: loginData.email,
+            password: loginData.password,
+        });
+
+        console.log(response.data.message);
+    } catch (error) {
+        console.error("Error logging in: ", error);
+    }
+};
 
 </script>
 
@@ -10,17 +30,17 @@ import AuthIcon from '../assets/AuthIcon.vue';
 
         </div>
         <div class="col-md-4 padding-auto">
-        <form>
+        <form @submit.prevent="sendLogins">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" required>
+                <input type="email" class="form-control" id="inputEmail3" required v-model="loginData.email" >
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label" required>Password</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3">
+                <input type="password" class="form-control" id="inputPassword3" required v-model="loginData.password">
                 </div>
             </div>
             <!-- <fieldset class="row mb-3">
