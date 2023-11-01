@@ -1,5 +1,6 @@
 <script setup>
 import Dash from '../components/Dash.vue';
+import axios from 'axios';
 
 const dashData = [
   {
@@ -33,6 +34,11 @@ const dashData = [
   'link': "https://lookerstudio.google.com/embed/reporting/2485ba8a-4454-4073-8314-23748c7661b2/page/2SggD",
   },
 ]
+
+const token = localStorage.getItem("token");
+// axios.config.defaults.header["Authorization"] = "Bearer "+token;
+// await axios.post("http://")
+
 </script>
 
 <template>
