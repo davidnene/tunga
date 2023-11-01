@@ -2,11 +2,14 @@
 import AuthIcon from '../assets/AuthIcon.vue';
 import axios from 'axios';
 import { ref, reactive } from 'vue';
+import router from '../router/index';
 
 const loginData = reactive({
     email: "",
     password: "",
 })
+
+const loginError = ref('')
 
 const sendLogins = async() => {
     try {
@@ -14,10 +17,18 @@ const sendLogins = async() => {
             email: loginData.email,
             password: loginData.password,
         });
+        if (response.data.hasOwnProperty("token")) {
+            localStorage.setItem("newToken", response.data.token);
+            router.push('/projects');
+            console.log(response.data.token);
 
-        console.log(response.data.message);
+        } else {
+            loginError.value = response.data.message;
+            console.log(loginError.value);
+        }
+        
     } catch (error) {
-        console.error("Error logging in: ", error);
+        console.error("Error logging in: ", loginError.value = error);
     }
 };
 
@@ -66,6 +77,9 @@ const sendLogins = async() => {
                 </div>
                 </div>
             </fieldset> -->
+            <div class="text-center">
+                <p style="color: red;" v-show="loginError !== ''">{{ loginError }}</p>
+            </div>
             <div class="row mb-3">
                 <div class="col-sm-10 offset-sm-2">
                 <div class="form-check">
@@ -78,7 +92,7 @@ const sendLogins = async() => {
             </div>
             <div class="row">
                     <div class="col-md-4" style="color: white;">
-                        <button type="submit" class="btn btn-bg-purple">Sign in</button>
+                        <button type="submit" class="btn btn-bg-purple on-hover">Sign in</button>
                     </div>
                     <div class="col-md-4">
                         <p>Don't have an account?</p>
@@ -94,5 +108,7 @@ const sendLogins = async() => {
 </template>
 
 <style lang="scss" scoped>
-
+.on-hover:hover {
+    color: purple;
+}
 </style>
